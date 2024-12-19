@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" type="text/css" href="styleg.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-black">
+  <header class="bg-black text-white font-sans">
+    <!-- Header -->
+    <div class="absolute top-0 left-0 w-full flex items-center justify-between px-6 py-4 z-10">
+      <!-- Logo -->
+      <div class="logo-container slide-in">
+        <img src="./pic/CYRILPHONOTS LOGO-modified.png" alt="Cyril Photos Logo" class="w-16 h-16 object-contain pulse">
+      </div>
+
+      <!-- Hamburger Menu (Mobile) -->
+      <button class="text-white text-2xl md:hidden focus:outline-none" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Navigation -->
+      <nav id="nav-menu" class="hidden md:flex items-center space-x-4 fade-in">
+        <a href="./About.html" class="hover:text-gray-400">About</a>
+        <a href="./index.html" class="hover:text-gray-400">Home</a>
+        <a href="http://localhost:3000" class="hover:text-gray-400">Contact/<span class="text-yellow-700 hover:text-gray-400">Book</span></a>
+        <div class="flex space-x-3">
+          <a href="https://www.facebook.com/share/184zfjj9mw/?mibextid=LQQJ4d" target="_blank" class="text-xl hover:text-blue-500">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/__cyrilphotos?igshid=NTc4MTIwNjQ2YQ==https://instagram.com/your-page" target="_blank" class="text-xl hover:text-pink-500">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/+233543591986" target="_blank" class="text-xl hover:text-green-500">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container slide-in mt-20">
+    <div class="heading">
+      <h3 class="text-gray-400">Photo <span>Gallery</span></h3>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="box grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="dream">
+        <img src="./pic/Real/web3.JPG" alt="Image 1" class="gallery-img">
+        <img src="./pic/Real/wed2.JPG" alt="Image 2" class="gallery-img">
+        <img src="./pic/Real/web5.JPG" alt="Image 3" class="gallery-img">
+      </div>
+      <div class="dream">
+        <img src="./pic/Real/wed.JPG" alt="Image 4" class="gallery-img">
+        <img src="./pic/Real/web6.JPG" alt="Image 5" class="gallery-img">
+        <img src="./pic/Real/web4.JPG" alt="Image 6" class="gallery-img">
+      </div>
+      <div class="dream">
+        <img src="./pic/Real/web3.JPG" alt="Image 7" class="gallery-img">
+        <img src="./pic/Real/wed2.JPG" alt="Image 8" class="gallery-img">
+        <img src="./pic/Real/web5.JPG" alt="Image 9" class="gallery-img">
+      </div>
+    </div>
+
+    <div class="btn">
+      <a href="#">More</a>
+    </div>
+  </div>
+
+  <!-- Modal for full-screen image -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImage">
+    <button class="prev">&lt;</button>
+    <button class="next">&gt;</button>
+  </div>
+
+  <script>
+    // Mobile menu toggle functionality
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

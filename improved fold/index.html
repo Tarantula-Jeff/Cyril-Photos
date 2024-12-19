@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    
+    <style>
+  
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            animation: slideIn 1.5s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+
+<style>
+    /* Custom styles for carousel navigation */
+    .carousel-button {
+      background-color: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+    .carousel-button:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  </style>
+
+
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+defer
+></script>
+</head>
+
+<body>
+  
+<header class="bg-black text-white font-sans" style="background: url('./pic/Real/front camera.JPG') no-repeat center center; background-size: cover;">
+    <!-- Header -->
+    <header class="absolute top-0 left-0 w-full flex items-center justify-between px-8 py-6 z-10">
+        <div class="logo-container slide-in">
+            <img src="./pic/CYRILPHONOTS LOGO-modified.png" alt="Cyril Photos Logo" class="w-16 h-16 object-contain pulse">
+        </div>
+        <nav class="flex items-center space-x-4 fade-in">
+            <a href="./gallerypage.html" class="hover:text-gray-400">Portfolio</a>
+            <a href="./About.html" class="hover:text-gray-400">About</a>
+            <a href="http://localhost:3000" class="hover:text-gray-400">Contact/<span>Book</span></a>
+            <div class="flex space-x-3">
+                <a href="https://www.facebook.com/share/184zfjj9mw/?mibextid=LQQJ4d" target="_blank" class="text-xl hover:text-blue-500">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/__cyrilphotos?igshid=NTc4MTIwNjQ2YQ==https://instagram.com/your-page" target="_blank" class="text-xl hover:text-pink-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/+233543591986" target="_blank" class="text-xl hover:text-green-500 ml-28">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex items-center justify-center bg-cover bg-center">
+        <div class="text-center">
+            <h1 class="text-6xl font-extrabold slide-in">Cyril Photos</h1>
+            <p class="text-2xl mt-4 tracking-widest fade-in">PHOTOGRAPHY</p>
+        </div>
+    </section>
+   
+
+    <!-- About Us Section -->
+<section id="about" class="bg-green-900 text-white py-20 px-8 slide-in">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">About Us</h2>
+      <div class="w-12 h-1 bg-gray-300 mx-auto mb-6"></div>
+      <p class="text-lg leading-relaxed mb-8">
+        
+Philip Acquah, also known as Cyril Lisk, is a talented and professional photographer who began his photography career at a young age. Over the years, he has honed his skills and gained extensive experience by working with notable clients, including celebrities like Serwaa Amihere and Ahuofe Patri, as well as international clients who book his services locally. Philip’s expertise extends to capturing professional moments for renowned companies such as Guinness, among others.
+
+Passionate about his craft, Philip strives to create beautifully garnished pictures that preserve cherished memories for his clients. He is deeply committed to delivering excellence, making every moment he captures truly special. His dedication and sacrifices reflect his deep love and respect for every client.
+
+Beyond photography, Philip has a keen interest in fashion and the beauty of natural landscapes. Guided by his belief that “With God, all things are possible,” he continues to bring his creative vision to life with passion and purpose.
+      </p>
+      <a href="./About.html"
+        class="inline-block bg-yellow-400 text-black font-bold text-lg px-6 py-3 rounded-full hover:bg-yellow-500 transition">
+        Learn More
+      </a>
+    </div>
+  </section> 
+   
+</header>
+
+<section>
+  <div class="w-full">
+    <img src="./pic/component/seplas.png" alt="separator" class="w-full h-auto">
+  </div> 
+</section>
+
+<section >
+  <img src="./pic/Real/filecompressed.jpg" 
+  alt="wedding photo" 
+  style="width: 2400px; height: 1000px; object-fit: cover;">
+</section>
+
+<section> 
+
+  <div class="relative flex flex-col items-center justify-center h-full bg-emerald-600 bg-opacity-50 px-6"
+  style="background-color: rgba(13, 148, 136, 0.5);">
+  <h1 class="text-5xl md:text-7xl font-bold mb-6 text-center">
+    Nana and Serwaa
+  </h1>  
+<p class="text-lg md:text-xl max-w-3xl text-center">
+  Nana and Serwaa expressed their heartfelt gratitude to Cyril Photos for capturing the most beautiful moments of their wedding day. They described the experience as magical, praising the team’s ability to preserve their special memories through stunning photography. 'Cyril Photos didn’t just take pictures; they brought our love story to life,' Jane shared. 'Every image is a masterpiece, and looking back at them fills us with joy and nostalgia. We couldn’t have asked for a better team to make our wedding memories truly unforgettable.' Joe added, 'Their professionalism, creativity, and attention to detail exceeded all expectations. We will cherish these photos forever.
+</p>
+</div>
+</section>
+
+<section>
+  <div class="w-full">
+    <img src="./pic/component/seplas.png" alt="separator" class="w-full h-auto">
+  </div> 
+</section>
+
+<section>
+<div class="w-full max-w-[400px] md:max-w-[700px] lg:max-w-[1000px] mx-auto">
+  <img src="./pic/Real/wed2.JPG" alt="Responsive Image" class="w-full h-auto object-cover rounded-lg">
+</div>
+
+</section>
+
+
+<section> 
+
+  <div class="relative flex flex-col items-center justify-center h-full bg-emerald-600 bg-opacity-50 px-6"
+  style="background-color: rgba(13, 148, 136, 0.5);">
+  <h1 class="text-5xl md:text-7xl font-bold mb-6 text-center">
+    Samuella and Benjamin
+  </h1>
+  
+<p class="text-lg md:text-xl max-w-3xl text-center">
+  Samuella and Benjamin shared their deep appreciation for Cyril Photos, thanking them for beautifully capturing the essence of their wedding day. They described the experience as enchanting, highlighting the team’s remarkable talent for turning special moments into timeless memories. "Cyril Photos didn’t just capture images; they told our love story through their lens," Jane said. "Every photo feels like a work of art, and each one brings back a flood of happiness and nostalgia. We couldn’t have chosen a better team to preserve our wedding day." Joe added, "Their creativity, professionalism, and meticulous attention to detail went above and beyond our expectations. These photos will be treasures we hold close forever."
+</p>
+</div>
+</section>
+
+<section>
+  <div class="w-full">
+    <img src="./pic/component/seplas.png" alt="separator" class="w-full h-auto">
+  </div> 
+</section>
+
+<section>
+  <div class="w-full max-w-[400px] md:max-w-[700px] lg:max-w-[1000px] mx-auto">
+    <img src="./pic/Real/web6.JPG" alt="Responsive Image" class="w-full h-auto object-cover rounded-lg">
+  </div>
+  
+  </section>
+
+<section> 
+
+  <div class="relative flex flex-col items-center justify-center h-full bg-emerald-600 bg-opacity-50 px-6"
+  style="background-color: rgba(13, 148, 136, 0.5);">
+  <h1 class="text-5xl md:text-7xl font-bold mb-6 text-center">
+    Yaw ana Dorcas
+  </h1>  
+<p class="text-lg md:text-xl max-w-3xl text-center">
+  Yaw and Dorcas expressed their sincere appreciation to Cyril Photos for capturing the most precious moments of their wedding day. They described the experience as unforgettable, applauding the team’s exceptional talent in preserving their cherished memories through breathtaking photography. "Cyril Photos didn’t just take pictures; they beautifully narrated our love story," Dorcas shared. "Each photo is a masterpiece, and revisiting them fills our hearts with happiness and nostalgia. We couldn’t have wished for a better team to make our wedding memories so special." Yaw added, "Their professionalism, creativity, and keen attention to detail surpassed all our expectations. These photos will remain treasured keepsakes forever."
+</p>
+</div>
+</section>
+
+
+
+<!-- Script -->
+<script>
+  const carousel = document.getElementById('testimonial-carousel');
+  const slides = carousel.querySelectorAll('.carousel-track > div');
+  const prevButton = document.getElementById('prev-button');
+  const nextButton = document.getElementById('next-button');
+  const currentSlideText = document.getElementById('current-slide');
+  let currentSlideIndex = 0;
+
+  function updateCarousel() {
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('hidden', index !== currentSlideIndex);
+    });
+    currentSlideText.textContent = `${String(currentSlideIndex + 1).padStart(2, '0')}/${String(slides.length).padStart(2, '0')}`;
+  }
+
+  prevButton.addEventListener('click', () => {
+    currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  nextButton.addEventListener('click', () => {
+    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    updateCarousel();
+  });
+
+  // Initialize carousel
+  updateCarousel();
+</script> 
+
+
+
+</body>
+
+ <!-- Footer -->
+ <footer class="text-gray-400 text-sm text-center py-6 bg-black">
+  <p>© 2023 Cyril Photos. All rights reserved. Designed by Aremtronix</p>
+</footer>
+  
+</html>
