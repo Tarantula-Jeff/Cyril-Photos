@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Sent Successfully</title><link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Message Sent Successfully</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         /* Reset */
@@ -14,22 +14,34 @@
             font-family: 'Arial', sans-serif;
         }
 
+        /* Fullscreen Video */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
         body {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            background: #f4f4f9;
+            background: black;
             text-align: center;
         }
 
         .container {
-            background: white;
+            background: rgba(255, 255, 255, 0.9); /* Transparent white box */
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             max-width: 500px;
             margin: 20px;
+            text-align: center;
         }
 
         h1 {
@@ -64,35 +76,56 @@
             color: #4CAF50;
             margin-bottom: 15px;
         }
+
+        .back-btn {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .back-btn svg {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
     </style>
 </head>
-<body class="bg-black">
-    <header>
-          <!-- Back Arrow -->
-  <div class="absolute top-4 left-4">
-    <a href="http://localhost:3000"  class="flex items-center text-white hover:text-green-500" >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-      </svg>
-      <span class="ml-2 text-sm font-medium">Back</span>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop class="video-bg">
+        <source src="./pic/component/Route To Success.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Back Button -->
+    <a href="https://cyrilend-7j9k.vercel.app/"  class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        <span>Back</span>
     </a>
 
-  </div>
-    </header>
+    <!-- Success Message -->
     <div class="container">
         <div class="icon">✅</div>
         <h1>Success!</h1>
         <p>Your message has been sent successfully. Thank you for reaching out to us.</p>
-        <a href="../index.html" class="btn">Go Back to Home</a>
+        <a href="./index.html" class="btn">Go Back to Home</a>
     </div>
 </body>
 </html>
-
-
-
-
-
-
-it has worked but it appears at the top right corner instead of the middle or say exact phone view. also the left and right navigation through the pictures do not work
-
-the loading of the pictures appears to be slow. any suggesitons to make it fast
