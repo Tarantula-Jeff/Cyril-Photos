@@ -95,13 +95,18 @@
   const modal = document.getElementById("imageModal");
   const fullImage = document.getElementById("fullImage");
   const closeBtn = document.querySelector(".close");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
   const galleryImages = document.querySelectorAll(".gallery-img");
 
-  // Open modal on image click
-  galleryImages.forEach((img) => {
+  let currentIndex = 0;
+
+  // Open modal and display clicked image
+  galleryImages.forEach((img, index) => {
     img.addEventListener("click", () => {
-      modal.style.display = "block";
+      modal.style.display = "flex"; // Use flex for centering
       fullImage.src = img.src;
+      currentIndex = index;
     });
   });
 
@@ -116,7 +121,20 @@
       modal.style.display = "none";
     }
   });
+
+  // Navigate to the previous image
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    fullImage.src = galleryImages[currentIndex].src;
+  });
+
+  // Navigate to the next image
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    fullImage.src = galleryImages[currentIndex].src;
+  });
 </script>
+
 
 </body>
 </html>
