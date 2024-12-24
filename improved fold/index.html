@@ -7,8 +7,89 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+VIC+Guides&family=Unlock&display=swap" rel="stylesheet">
 
-    
+    <style>
+      .underline-custom {
+          position: relative;
+          display: inline-block;
+          padding-bottom: 5px; /* Adjust padding to position underline */
+      }
+      
+      .underline-custom::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 4px; /* Adjust underline thickness */
+          background: linear-gradient(to right, #FFD700, #FF8C00); /* Gradient colors */
+          border-radius: 2px; /* Smooth edges */
+          transform: scaleX(0); /* Start with no underline */
+          transform-origin: right;
+          transition: transform 0.4s ease;
+      }
+      
+      .underline-custom:hover::after {
+          transform: scaleX(1); /* Full underline on hover */
+          transform-origin: left;
+      }
+      </style>
+      
+
+    <style>
+      /* Your in-page CSS */
+      .playwrite-au-vic-guides-regular {
+          font-family: "Playwrite AU VIC Guides", serif;
+          font-weight: 400;
+          font-style: normal;
+      }
+  </style>
+
+<style>
+.unlock-regular {
+  font-family: "Unlock", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
+
+    <style>
+      /* Slide In */
+      .slide-in {
+          animation: slideIn 1.5s ease-out forwards;
+      }
+      @keyframes slideIn {
+          from {
+              transform: translateY(-50px);
+              opacity: 0;
+          }
+          to {
+              transform: translateY(0);
+              opacity: 1;
+          }
+      }
+
+      /* Slide Out */
+      .slide-out {
+          animation: slideOut 1.5s ease-in forwards;
+      }
+      @keyframes slideOut {
+          from {
+              transform: translateY(0);
+              opacity: 1;
+          }
+          to {
+              transform: translateY(-50px);
+              opacity: 0;
+          }
+      }
+  </style>
+
+        
     <style>
   
         /* Animations */
@@ -69,7 +150,7 @@ defer
 ></script>
 </head>
 
-<body>
+<body class="bg-black">
   
 <header class="bg-black text-white font-sans" style="background: url('./pic/Real/front camera.JPG') no-repeat center center; background-size: cover;">
     <!-- Header -->
@@ -139,11 +220,11 @@ Beyond photography, Philip has a keen interest in fashion and the beauty of natu
   style="width: 2400px; height: 1000px; object-fit: cover;">
 </section>
 
-<section> 
+<section class="slide-in" > 
 
   <div class="relative flex flex-col items-center justify-center h-full bg-emerald-600 bg-opacity-50 px-6"
   style="background-color: rgba(13, 148, 136, 0.5);">
-  <h1 class="text-5xl md:text-7xl font-bold mb-6 text-center">
+  <h1 class="text-5xl md:text-7xl font-bold mb-6 text-center playwrite-au-vic-guides-regular">
     Nana and Serwaa
   </h1>  
 <p class="text-lg md:text-xl max-w-3xl text-center">
@@ -166,11 +247,11 @@ Beyond photography, Philip has a keen interest in fashion and the beauty of natu
 </section>
 
 
-<section> 
+<section class="slide-in" > 
 
   <div class="relative flex flex-col items-center justify-center h-full bg-emerald-600 bg-opacity-50 px-6"
   style="background-color: rgba(13, 148, 136, 0.5);">
-  <h1 class="text-5xl md:text-7xl font-bold mb-6 text-center">
+  <h1 class="text-5xl md:text-7xl font-bold mb-6 text-center unlock-regular underline-custom">
     Samuella and Benjamin
   </h1>
   
@@ -193,11 +274,11 @@ Beyond photography, Philip has a keen interest in fashion and the beauty of natu
   
   </section>
 
-<section> 
+<section class="slide-in" > 
 
   <div class="relative flex flex-col items-center justify-center h-full bg-emerald-600 bg-opacity-50 px-6"
   style="background-color: rgba(13, 148, 136, 0.5);">
-  <h1 class="text-5xl md:text-7xl font-bold mb-6 text-center">
+  <h1 class="text-5xl md:text-7xl font-bold mb-6 text-center playwrite-au-vic-guides-regular">
     Yaw and Dorcas
   </h1>  
 <p class="text-lg md:text-xl max-w-3xl text-center">
@@ -238,7 +319,28 @@ Beyond photography, Philip has a keen interest in fashion and the beauty of natu
   updateCarousel();
 </script> 
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const slideElements = document.querySelectorAll(".slide-in, .slide-out");
 
+      const observer = new IntersectionObserver(
+          (entries) => {
+              entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add("slide-in");
+                      entry.target.classList.remove("slide-out");
+                  } else {
+                      entry.target.classList.remove("slide-in");
+                      entry.target.classList.add("slide-out");
+                  }
+              });
+          },
+          { threshold: 0.1 } // Trigger animation when 10% of the element is visible
+      );
+
+      slideElements.forEach((el) => observer.observe(el));
+  });
+</script>
 
 </body>
 
